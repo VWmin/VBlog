@@ -1,0 +1,18 @@
+spring:
+  thymeleaf:
+    cache: false
+
+  mvc:
+    date-format: yyyy-MM-dd
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://203.195.217.233:3307/blog
+    username: root
+    password: justmiss
+
+
+
+  redis:
+    host: 203.195.217.233:6379

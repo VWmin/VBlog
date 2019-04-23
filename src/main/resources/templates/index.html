@@ -1,0 +1,408 @@
+<html lang="en" xmlns:th="http://www.themeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/ext/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <aside id="sideCtrl">
+        <div class="container">
+            <div class="placeholder-s"></div>
+            <ul class="sns">
+                <li><a href="http://twitter.com" target="_blank"><i class="fa fa-twitter " aria-hidden="true"></i></a>
+                </li>
+                <li class="special_qq"><a href="" target="_blank"><i class="fa fa-qq " aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/vwmin" target="_blank"><i class="fa fa-github " aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="placeholder"></div>
+            <ul class="promotion">
+                <li><a href="" target="_blank"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></li>
+                <li><a href="" target="_blank"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="placeholder"></div>
+            <ul class="nav">
+                <div class="show_page">
+                    <input class="cur_page" type="number" placeholder="1" >
+                    <div class="divide">/</div>
+                    <div class="tot_page">6</div>
+                </div>
+                <li class="special_chevron"><a class="" rel="prev" onclick="prePage()"><i class="fa fa-chevron-left"
+                            aria-hidden="true"></i></a></li>
+                <li class="special_chevron"><a class="" rel="next" onclick="nextPage();"><i class="fa fa-chevron-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="javascript:returnTop();"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="placeholder-s"></div>
+        </div>
+    </aside>
+
+
+
+    <div>
+        <div id="icon">
+            <div id="logo">VWmin</div>
+        </div>
+
+        <nav id="navigation">
+            <div class="container">
+                <ul class="nav_list">
+                    <li id="nav-design"> <a href="" rel="archives">Design</a></li>
+                    <li id="nav-develop"> <a href="" rel="archives">Develop</a></li>
+                    <li id="nav-gadget"> <a href="" rel="archives">Gadget</a></li>
+                    <li id="nav-log"> <a href="" rel="archives">Log</a></li>
+                    <li id="nav-photo"> <a href="" rel="archives">Photo</a></li>
+                    <li id="nav-travel"> <a href="" rel="archives">Travel</a></li>
+                    <li id="nav-sample"> <a href="" rel="archives">Sample</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div>
+            <section id="book">
+                <article class="top">
+                    <p class="label"><span>Develop</span></p>
+                    <div class="page" >
+                        <div class="eyecatch"><img class="largeImg" th:src="@{/img/background1.jpg}"></div>
+                        <div class="container">
+                            <h1><a th:href="@{/sampleArticle1}" target="_blank">Sample Article Title 1</a>
+                            </h1>
+                            <div class="body">
+                                <p class="content">
+                                    而进造第教单西能劳到省，应一以各并至志车般政。部技快府流统许学王能，海则物次深此合资相。增布验个已月主家记，门收马当质天红铁。的老量再件形相路究，理统飞极加江选机大，确豆葬广伸秩斗。选始放长几下人积，任于铁的物动身院，元承更广你口。内建开对给放周影界，传分规身马接内心了，并眼画队少茅。共论维而没能，式先们亲，今该飞信。
+                                </p>
+                            </div>
+
+                        </div>
+                        <footer>
+                            <time class="date" datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time>
+                        </footer>
+                    </div>
+                </article>
+
+                <aside id="side">
+                    <section id="sideInfo">
+                        <div class="floor1">
+                            <div class="temperature">19</div>
+                            <div class="locationImg-box">
+                                <img class="locationImg" th:src="@{/img/location.jpg}">
+                            </div>
+                            <div class="location_and_date">
+                                <div class="location">NanChang</div>
+                                <div class="date">15 Apr ‘19</div>
+                            </div>
+                        </div>
+                        <div class="floor2">
+                            <div class="weather floor2-text left"><i class="fa fa-cloud" aria-hidden="true"></i> Cloudy
+                            </div>
+                            <div class="air floor2-text right">Good</div>
+                        </div>
+                        <div class="floor2">
+                            <div class="maxT floor2-text left"><i class="fa fa-thermometer-empty"
+                                    aria-hidden="true"></i> 14℃</div>
+                            <div class="minT floor2-text right"><i class="fa fa-thermometer-full"
+                                    aria-hidden="true"></i> 21℃</div>
+                        </div>
+                        <div class="floor2">
+                            <div class="sunrise floor2-text left">sunrise: 5:11</div>
+                            <div class="sunset floor2-text right">sunset: 18:11</div>
+                        </div>
+                        <div class="placeholder"></div>
+                    </section>
+
+
+                    <section id="populars">
+                        <h1>Monthly Popular</h1>
+                        <ul>
+                            <li><a th:href="@{/sampleArticle1}"  title="" target="_blank">Sample list item 1.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 2.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 3.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 4.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 5.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 6.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 7.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 8.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 9.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 10.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 11.</a></li>
+                            <li><a th:href="@{/sampleArticle1}"   title="" target="_blank">Sample list item 12.</a></li>
+                        </ul>
+                    </section>
+
+
+                </aside>
+
+                <article>
+                    <p class="label"><span>Develop</span></p>
+                    <div class="page">
+                        <div class="eyecatch"><img class="smallImg" src="/img/background2.jpg"></div>
+                        <div class="container">
+                            <h1><a th:href="@{/sampleArticle1}"  target="_blank" >Sample Article Title 2</a></h1>
+                            <div class="body">
+                                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.</p>
+                            </div>
+
+                        </div>
+                        <footer><time class="date" datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time></footer>
+                    </div>
+                </article>
+
+                <article>
+                    <p class="label"><span>Develop</span></p>
+                    <div class="page">
+                        <div class="eyecatch">
+
+                            <img class="smallImg" src="/img/background3.jpg">
+
+                        </div>
+                        <div class="container">
+                            <header>
+                                <h1><a th:href="@{/sampleArticle1}"  target="_blank" >Sample Article Title 3</a></h1>
+                            </header>
+                            <div class="body">
+                                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <footer>
+                            <time class="date" datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time>
+                        </footer>
+                    </div>
+                </article>
+
+                <article>
+                    <p class="label"><span>Develop</span></p>
+                    <div class="page">
+                        <div class="eyecatch">
+
+                            <img class="smallImg" src="/img/background4.jpg">
+
+                        </div>
+                        <div class="container">
+                            <header>
+                                <h1><a th:href="@{/sampleArticle1}"  target="_blank" >Sample Article Title 4</a></h1>
+                            </header>
+                            <div class="body">
+                                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <footer>
+                            <time class="date" datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time>
+                        </footer>
+                    </div>
+                </article>
+
+
+                <article>
+                    <p class="label"><span>Develop</span></p>
+                    <div class="page">
+                        <div class="eyecatch">
+
+                            <img class="smallImg" src="/img/background5.jpg">
+
+                        </div>
+                        <div class="container">
+                            <header>
+                                <h1><a th:href="@{/sampleArticle1}" target="_blank" >Sample Article Title 5</a></h1>
+                            </header>
+                            <div class="body">
+                                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <footer>
+                            <time class="date" datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time>
+                        </footer>
+                    </div>
+                </article>
+
+
+                <article>
+                    <p class="label"><span>Develop</span></p>
+                    <div class="page">
+                        <div class="eyecatch">
+
+                            <img class="smallImg" src="/img/background6.jpg">
+
+                        </div>
+                        <div class="container">
+                            <header>
+                                <h1><a th:href="@{/sampleArticle1}"  target="_blank" >Sample Article Title 6</a></h1>
+                            </header>
+                            <div class="body">
+                                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <footer>
+                            <time class="date" datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time>
+                        </footer>
+                    </div>
+                </article>
+
+
+
+
+            </section>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <hr>&copy; 2019 VWmin All Right Reserved.
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="/ext/jqthumb.min.js"></script>
+    <script type="text/javascript">
+        
+        $('.page').on("click", toClick($('.page')));
+
+        function toClick(item){
+            console.log($(item).children("a").attr("href"));
+        }
+
+        $('.largeImg').jqthumb({
+            width: '100%',
+            height: '100%'
+        });
+
+        $('.smallImg').jqthumb({
+            width: '100%',
+            height: '100%'
+        });
+
+        $('.locationImg').jqthumb({
+            width: '100%',
+            height: '100%'
+        });
+
+        $(window).resize(function () {
+            $('.largeImg').jqthumb({
+                width: '100%',
+                height: '100%'
+            });
+
+            $('.smallImg').jqthumb({
+                width: '100%',
+                height: '100%'
+            });
+
+            $('.locationImg').jqthumb({
+                width: '100%',
+                height: '100%'
+            });
+
+
+        });
+
+        // $('.content').prepend("&nbsp;&nbsp;");
+
+        //页面跳转监听
+        $('.cur_page').keypress(function (e) {
+            // alert("error");
+            if (e.which == 13) {
+                // tpPage();
+                var tar_page = $('.cur_page').val();
+                // alert(tar_page);
+                if (tar_page < 1 || tar_page > $('.tot_page').text()) {
+                    alert("Only accept number between 1 and " + $('.tot_page').text());
+                } else {
+                    toPage(tar_page);
+                }
+            }
+        });
+
+        var sdelay = 0;
+
+        function returnTop() {
+            window.scrollBy(0, -30);
+            if (document.body.scrollTop > 0) {
+                sdelay = setTimeout('returnTop()', 10);
+            }
+        }
+
+        function toPage(tar_page) {
+            var temp = window.location.pathname.split("/");
+            temp.pop();
+            var address = "";
+            var newUrl = null;
+            for (var i = 0; i < temp.length; i++) {
+                address += temp[i] + "/";
+            }
+            address = address.replace("page/", "");
+            if (tar_page == 1) newUrl = address + "index.html";
+            else newUrl = address + "page/" + tar_page;
+            window.open(newUrl);
+        }
+
+        function prePage() {
+            var domain = document.domain;
+            // alert(domain);
+            var cur = window.location.pathname.split("/").pop();
+            if(cur === "index" || cur == "1"){
+                alert("No more previous pages exist.");
+            }else{
+                var next = parseInt(cur) - 1;
+                window.open(next);
+            }
+
+        }
+
+        function nextPage() {
+            var domain = document.domain;
+            // alert(domain);
+            var cur = window.location.pathname.split("/").pop();
+            var tot = $('.tot_page').text();
+            if(cur == tot){
+                alert("No more previous pages exist.");
+            }else{
+                var next = parseInt(cur) + 1;
+                // alert(next);
+                window.open(next);
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

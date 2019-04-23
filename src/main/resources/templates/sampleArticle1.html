@@ -1,0 +1,232 @@
+<html lang="en" xmlns:th="http://www.themeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Article 1</title>
+
+    <link rel="stylesheet" th:href="@{/css/common_article.css}">
+    <link rel="stylesheet" th:href="@{/ext/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <aside id="sideCtrl">
+        <div class="container">
+            <div class="placeholder-s"></div>
+            <ul class="sns">
+                <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter " aria-hidden="true"></i></a>
+                </li>
+                <li class="special_qq"><a href="" target="_blank"><i class="fa fa-qq " aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/vwmin" target="_blank"><i class="fa fa-github "
+                            aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="placeholder"></div>
+            <ul class="promotion">
+                <li><a href="" target="_blank"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></li>
+                <li><a href="" target="_blank"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="placeholder"></div>
+            <ul class="nav">
+                <div class="show_page">
+                    <input class="cur_page" type="number" placeholder="1" onkeydown="">
+                    <div class="divide">/</div>
+                    <div class="tot_page">6</div>
+                </div>
+                <li class="special_chevron"><a class="" rel="prev" onclick="prePage()"><i class="fa fa-chevron-left"
+                            aria-hidden="true"></i></a></li>
+                <li class="special_chevron"><a class="" rel="next" onclick="nextPage();"><i class="fa fa-chevron-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="javascript:returnTop();"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="placeholder-s"></div>
+        </div>
+    </aside>
+
+
+    <div class="logo">VWmin</div>
+    <div class="label">Develop</div>
+
+    <div class="fore-box">
+        <div class="backImg-box"><img class="backImg" th:src="@{/img/background1.jpg}" alt=""></div>
+
+        <div class="slide-btn" onclick="toTop()"><i class="fa fa-angle-double-up rotate_180_1" aria-hidden="true"></i>
+        </div>
+        <div class="shadow-box"></div>
+        <div class="article-info">
+            <h1>Sample Article Title 1</h1>
+            <p class="author">VWmin</p>
+            <p class="date"><time datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time></p>
+        </div>
+    </div>
+
+
+
+
+    <div class="page">
+        <section>
+            <h1>Sample Article Title 1</h1>
+            <p class="author">VWmin</p>
+            <p class="date"><time datetime="2016-04-14JST19:16+09:00:00">14 Apr ’16</time></p>
+            <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque et gravida quam. Vestibulum non leo a lacus finibus volutpat. Praesent ante lectus, sodales
+                rhoncus imperdiet eget, euismod vestibulum risus. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Sed erat lacus, hendrerit id risus at, tempus tristique mi. Aliquam sit amet nibh convallis,
+                cursus ipsum vitae, tincidunt ex. Morbi tincidunt ullamcorper egestas. Nulla sit amet nibh sed elit
+                interdum consequat vel ac neque.</p>
+            <p class="content">Nullam iaculis interdum sapien, in tempus urna egestas sed. Suspendisse semper leo a
+                ipsum faucibus, eget efficitur turpis eleifend. Vestibulum dictum quam et mauris blandit laoreet.
+                Praesent ante enim, bibendum vel orci sed, sodales pharetra nulla. Nullam hendrerit turpis lorem, nec
+                porta neque vestibulum nec. Nam egestas condimentum mi, vitae gravida leo pretium et. Integer aliquam
+                orci et dolor faucibus, ut vulputate nulla luctus. Nulla felis ligula, efficitur in ipsum sollicitudin,
+                faucibus porttitor mauris. Phasellus ullamcorper eros eu ex accumsan euismod. Maecenas faucibus ipsum
+                non tincidunt aliquet. Donec scelerisque quam sed ante ultrices, at lacinia tortor posuere.</p>
+            <p class="content">Quisque pharetra purus sapien, non laoreet augue congue consectetur. Donec eu odio sit
+                amet orci consectetur accumsan eu a augue. Nunc eleifend auctor ligula at pretium. Vivamus interdum
+                justo ac augue sodales faucibus. Aliquam egestas augue non metus cursus, at mollis ipsum elementum.
+                Quisque semper tellus ac bibendum volutpat. Aenean et nunc id ipsum sodales consequat quis vel purus.
+                Vestibulum et leo nec dolor feugiat scelerisque sit amet et libero. Suspendisse vestibulum faucibus
+                tellus. Fusce dictum dolor ac posuere porta. Suspendisse ac pellentesque quam. Maecenas in efficitur
+                nibh, eget porttitor neque. Quisque commodo placerat sapien porttitor rhoncus. Integer sit amet luctus
+                lorem. Sed interdum laoreet rutrum. Integer ultricies risus et ornare aliquam.</p>
+            <p class="content">Duis congue finibus fermentum. Praesent scelerisque porttitor tellus non rhoncus. Mauris
+                feugiat nunc diam, id feugiat leo porttitor vitae. Ut laoreet tellus et velit mattis, at luctus nulla
+                interdum. Duis dictum urna nisl. Nullam ornare ipsum quam, vitae facilisis elit tempus sed. Vestibulum
+                sit amet felis molestie, euismod lacus sit amet, facilisis sem. Integer commodo eget lorem eu consequat.
+                Etiam risus purus, fringilla ut ornare in, ultrices commodo arcu. Nunc ut neque tellus. Sed magna nisi,
+                consectetur dictum neque sagittis, tincidunt tempus enim. Nulla euismod nisl mauris, eu mattis libero
+                aliquet sed. Sed tristique quam a lectus sollicitudin, nec commodo erat finibus. Vestibulum eget cursus
+                dolor. Nam congue arcu at dolor pellentesque accumsan.</p>
+            <p class="content">Maecenas quis quam cursus, ultrices orci non, venenatis nisi. Donec ut elementum augue.
+                Aenean sed magna
+                libero. Integer urna purus, pulvinar cursus ipsum quis, consectetur venenatis nulla. Integer elementum
+                ultricies velit, a tempor libero ultricies vitae. Nulla at condimentum orci, nec ultrices turpis.
+                Integer
+                lobortis lacus non velit porta, et placerat ante pharetra. Sed ante diam, lacinia vel sollicitudin sed,
+                scelerisque nec metus.</p>
+        </section>
+
+        <div class="copyright">
+            <hr>&copy; 2019 VWmin All Right Reserved.
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" th:src="@{/ext/jqthumb.min.js}"></script>
+    <script type="text/javascript" th:src="@{/ext/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js}"></script>
+    <script>
+        //添加段落缩进
+        $('.content').prepend("&nbsp;&nbsp;&nbsp;&nbsp;");
+
+        function toTop() {
+            $(".fore-box").toggleClass("fore-box-toTop");
+            setTimeout( function(){
+                $('.fore-box').toggleClass("fore-box-hidden");
+            }, 500);
+            $(".page").toggleClass("page-toTop");
+            if ($('.fa-angle-double-up').hasClass("rotate_180_1")) $('.fa-angle-double-up').removeClass("rotate_180_1")
+                .addClass("rotate_180_2");
+            else $('.fa-angle-double-up').removeClass("rotate_180_2").addClass("rotate_180_1");
+        }
+
+
+        $('.backImg').jqthumb({
+            width: $(window).width(),
+            height: $(window).height()
+        });
+
+        $(window).resize(function () {
+            $('.backImg').jqthumb({
+                width: $(window).width(),
+                height: $(window).height()
+            });
+        });
+
+        $('.fore-box').mousewheel(function (event, delta) {
+            var dir = delta > 0 ? 'Up' : 'Down';
+            if (dir == 'Up') {
+                console.log('向上滚动');
+
+            } else {
+                console.log('向下滚动');
+                if (!$(".fore-box").hasClass("fore-box-toTop")) toTop();
+            }
+            return false;
+
+        });
+
+
+
+        //页面跳转监听
+        $('.cur_page').keypress(function (e) {
+            // alert("error");
+            if (e.which == 13) {
+                // tpPage();
+                var tar_page = $('.cur_page').val();
+                // alert(tar_page);
+                if (tar_page < 1 || tar_page > $('.tot_page').text()) {
+                    alert("Only accept number between 1 and " + $('.tot_page').text());
+                } else {
+                    toPage(tar_page);
+                }
+            }
+        });
+
+        var sdelay = 0;
+
+        function returnTop() {
+            window.scrollBy(0, -30);
+            if (document.body.scrollTop > 0) {
+                sdelay = setTimeout('returnTop()', 10);
+            }
+        }
+
+        function toPage(tar_page) {
+            var temp = window.location.pathname.split("/");
+            temp.pop();
+            var address = "";
+            var newUrl = null;
+            for (var i = 0; i < temp.length; i++) {
+                address += temp[i] + "/";
+            }
+            address = address.replace("page/", "");
+            if (tar_page == 1) newUrl = address + "index.html";
+            else newUrl = address + "page/" + tar_page;
+            window.open(newUrl);
+        }
+
+        function prePage() {
+            var domain = document.domain;
+            // alert(domain);
+            var cur = window.location.pathname.split("/").pop();
+            if(cur === "index" || cur == "1"){
+                alert("No more previous pages exist.");
+            }else{
+                var next = parseInt(cur) - 1;
+                window.open(next);
+            }
+
+        }
+
+        function nextPage() {
+            var domain = document.domain;
+            // alert(domain);
+            var cur = window.location.pathname.split("/").pop();
+            var tot = $('.tot_page').text();
+            if(cur == tot){
+                alert("No more previous pages exist.");
+            }else{
+                var next = parseInt(cur) + 1;
+                // alert(next);
+                window.open(next);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

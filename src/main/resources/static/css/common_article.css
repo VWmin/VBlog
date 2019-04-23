@@ -1,0 +1,404 @@
+body {
+    background-color: #b3d4fc3a;
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0; padding: 0;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection{
+    background: #e95932;
+    color: white;
+}
+
+
+/*************************
+
+
+        sideCtrl
+
+
+**************************/
+/*整体区间*/
+#sideCtrl {
+    z-index: 999;
+    position: fixed;
+    float: right;
+    height: 100%;
+    width: 45px;
+
+    top: 0;
+    right: 0;
+    border-left: 1px white solid;
+
+    background: rgba(255, 255, 255, 0.65);
+
+}
+
+/*整体区间*/
+#sideCtrl .container {
+    width: 45px;
+    height: 100%;
+}
+
+/*分块*/
+#sideCtrl .container ul {
+    /* margin-top: 20px; */
+    width: 45px;
+}
+
+/*单个图标*/
+#sideCtrl .container li {
+    /* padding: 10px 12px; */
+    padding-left: 12px; padding-right: 12px;
+    width: 21px;
+    font-size: 16px;
+    height: 4.2%;
+    display: flex;
+}
+
+#sideCtrl .container li.special_qq {
+    padding-left: 10.5px;
+    padding-right: 10.5px;
+}
+
+#sideCtrl .container li.special_chevron {
+    padding-left: 13.9px;
+    padding-right: 13.9px;
+}
+
+/*链接样式*/
+#sideCtrl .container a {
+    color: #666;
+    align-self: center;
+}
+#sideCtrl .container li{
+    transition: background-color 0.4s;
+}
+
+#sideCtrl .container li:hover {
+    background-color: #ed3a08;
+}
+
+#sideCtrl .container li:hover a {
+    color: white;
+}
+
+/*文字样式*/
+#sideCtrl .container .nav .show_page{
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;    
+    /* height: 45px; */
+    height: 6.4%;
+    background: #eeeded;
+    font-size: 10px;
+
+}
+#sideCtrl .container .nav .show_page .cur_page{
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;    
+    height: 33%; width: 40px;
+    margin-left: 5px;
+    background:none;  
+	outline:none;  
+    border:0px;
+}
+#sideCtrl .container .nav .show_page .divide{
+    height: 33%; width: 45px;
+    text-align: center;
+    
+}
+#sideCtrl .container .nav .show_page .tot_page{
+    height: 10px; width: 40px;
+    margin-bottom: 5px; margin-right: 5px;
+    text-align: right;
+    font-size: 12px;
+}
+
+
+/*分块位置*/
+#sideCtrl .container .placeholder{
+    height: 25%;
+}
+#sideCtrl .container .placeholder-s{
+    height: 5%;
+}
+
+/************************
+
+
+        background
+
+************************/
+
+.fore-box{
+    position: absolute;
+    left: 0;top: 0;
+
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-out;
+}
+
+.backImg-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1;  */
+
+    transition: 0.5s;
+}
+
+.fore-box-hidden:hover .backImg-box{
+    transform: scale(1.2, 1.2);
+}
+
+
+/*滑动按钮*/
+.slide-btn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    /* font-weight: 700; */
+    z-index: 100;
+    
+    bottom: 15%;
+    left: 47.5%;;
+
+
+}
+
+.rotate_180_1{
+    transition: all 0.5s;
+    transform: rotate(0);
+}
+.rotate_180_2{
+    transition: all 0.5s;
+    transform: rotate(180deg);
+}
+
+.logo {
+    position: fixed;
+    /* margin-top: 50px;
+    margin-left: 50px; */
+    left: 25px; top: 25px;
+    z-index: 999;
+
+    text-align: center;
+    line-height: 40px;
+    font-size: 13px;
+    color: white;
+    font-weight: 800;
+
+    /* background-image: linear-gradient(to bottom right, rgb(157, 170, 177),rgba(46, 169, 223, 0.7), rgba(86, 108, 115, 1)); */
+    background: linear-gradient(150deg, transparent 7px, #e95932 0);
+    /* background-color: #e95932; */
+    font-family: AppleSystemBold, MyHelveticaBold, YakuHanJPBold, "Noto Sans Japanese Bold", MyYuGothicM, sans-serif;
+    width: 64.72px;
+    height: 40px;
+    
+    float: left;
+}
+
+.label{
+    position: fixed;
+
+    left: 89.72px; top: 25px;
+    z-index: 999;
+    /* margin-left: 114.72px; */
+
+    /* width: auto; */
+    height: 40px;
+    float: left;
+
+    padding: 0 5px;
+
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 40px;
+    z-index: 100;
+    text-transform: uppercase;
+    color: #e95932;
+    background: white;
+}
+
+/*阴影区域*/
+.shadow-box{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(28, 28, 28, 0.9), rgba(255, 255, 255, 0));
+}
+
+/*文章信息区域*/
+.article-info{
+    position: absolute;
+    bottom: 0;
+
+    width: 50%;
+    height: 30%;
+    padding: 50px 0 0 100px;
+
+    color: white;
+    font-family: AppleSystemBold, MyHelveticaBold, YakuHanJPBold, "Noto Sans Japanese Bold", MyYuGothicM, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.58em;
+}
+
+.article-info .date{
+    letter-spacing: 0;
+    margin-top: 10px;
+    /* float: left; */
+}
+
+.date::before{
+    content: " - "
+}
+.article-info .author{
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+.author::before{
+    content: " - "
+}
+
+/*****************************
+
+
+            page
+
+
+******************************/
+
+
+.page{
+    position: absolute;
+    top: 100%;
+
+    height: 100%;
+
+    transition: 0.5s ease-out;
+
+    margin: 0 25%;
+    padding-right: 46px;
+
+    /* display: none; */
+}
+
+.page h1{
+    padding-top: 50px;
+
+    text-align: right;
+    font-size: 37px;
+    letter-spacing: 0.3em;
+    font-family: 'MyBlair', sans-serif;
+
+}
+
+.page .author{
+    text-align: right;
+    margin-right: 1em;
+    letter-spacing: 0;
+    margin-top: 20px;
+
+    font-family: AppleSystemBold, MyHelveticaBold, YakuHanJPBold, "Noto Sans Japanese Bold", MyYuGothicM, sans-serif;
+    font-weight: 700;
+}
+
+.page .date{
+    text-align: right;
+    margin-right: 1em;
+    letter-spacing: 0;
+    margin-top: 10px;
+
+    font-family: AppleSystemBold, MyHelveticaBold, YakuHanJPBold, "Noto Sans Japanese Bold", MyYuGothicM, sans-serif;
+    font-weight: 700;
+}
+
+.page .content{
+    font-family: 'Source Sans Pro', 'Roboto','Montserrat','Roboto Slab','PT Sans', 'Ubuntu', sans-serif;
+    font-size: 21px;
+
+    margin: 40px 0;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+/******************************
+
+
+        copyright
+
+
+******************************/
+
+.copyright{
+    /* position: fixed; */
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: gray;
+}
+
+.copyright img{
+    width: 25px;
+}
+
+.copyright hr{
+    width: 80%;
+    border: 0;
+    height: 1px;
+    /* background-image: linear-gradient(red, yellow, blue); 从头部开始的线性渐变 */
+    background-image: linear-gradient(to right, white, gray, white); /*从左侧开始的线性渐变*/
+    /* to bottom right 从↖到↘ */
+
+}
+
+
+
+.fore-box-toTop{
+    top: -25%;
+    height: 75%;
+}
+
+.page-toTop{
+    top: 50%;
+
+    /* display: inline; */
+}

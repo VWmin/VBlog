@@ -1,0 +1,679 @@
+body {
+    background-color: rgba(226, 226, 226, 0.671);
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0; padding: 0;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection{
+    background: #e95932;
+    color: white;
+}
+
+
+body #navigation,
+#book,
+#icon {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+/********************
+
+
+        icon
+
+**********************/
+
+#icon{
+    height: 45px;
+    width: 76%;
+}
+
+
+#icon #logo {
+    margin-left: 20px;
+    width: 64.72px;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px;
+    font-size: 13px;
+    color: white;
+    font-weight: 800;
+
+    /* background-image: linear-gradient(to bottom right, rgb(157, 170, 177),rgba(46, 169, 223, 0.7), rgba(86, 108, 115, 1)); */
+    background: linear-gradient(150deg, transparent 7px, #e95932 0);
+    /* background-color: #e95932; */
+    font-family: AppleSystemBold, MyHelveticaBold, YakuHanJPBold, "Noto Sans Japanese Bold", MyYuGothicM, sans-serif;
+
+}
+
+
+
+/**********************
+
+        Navigation
+
+************************/
+
+#navigation {
+    position: relative;
+    height: 35px;
+    width: 76%;
+    /* margin-left: 20px; */
+}
+
+#navigation .container{
+    margin-left: 20px;
+    background-color: #fff;
+    height: 35px;
+}
+
+#navigation .nav_list li {
+    float: left;
+}
+
+#navigation .nav_list li a {
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-left: 12px;
+    padding-right: 15px;
+    height: 25px;
+
+    color: #444;
+
+
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+
+    transition: background-color 0.4s;
+}
+
+#navigation .nav_list li a:hover {
+    background-color: #ed3a08;
+    color: #fff;
+}
+
+#navigation .nav_list li a:active {
+    background-color: #ed3a08;
+    color: #fff;
+}
+
+
+/*********************
+
+        label
+
+*********************/
+#book article .label {
+
+
+    /* margin: 0; padding: 0; */
+
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px;
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    right: 0;
+    padding-right: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ed3a08;
+}
+
+#book article .label:before {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    content: url(../img/label_coner.svg);
+}
+#book article .label:after{
+    width: 10px;
+    height: 15px;
+}
+
+/**********************
+
+        book
+
+**********************/
+
+#book {
+    width: 76%;
+}
+
+#book article {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    /* margin: 10px; */
+    /* margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; */
+    width: 25%;
+    height: 350px;
+}
+
+#book article .page{
+    /* width: 300px;
+    height: 390px; */
+    background: #fff;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+    border-radius: 7px;
+
+    margin: 10px 10px 10px 20px;
+    height: 330px;
+}
+
+/*阴影效果*/
+#book article .page:hover {
+    box-shadow: 0 6px 16px 5px rgba(0, 0, 0, 0.29), 6px 0 16px 3px rgba(0, 0, 0, 0.18);
+}
+
+/***图片***/
+#book article .page .eyecatch {
+    /* width: 300px;
+    height: 200px; */
+    height: 50%;
+    width: 100%;
+    border-radius: 7px;
+    float: top; /*并排显示效果*/
+}
+
+/**图片动画**/
+#book article .page .eyecatch img {
+    /* width: 100%; height: auto; */
+    transition: transform 0.5s;
+}
+
+#book article .page:hover .eyecatch img {
+    transform: scale(1.05, 1.05);
+}
+
+/*文字*/
+#book article .page .container {
+    overflow: hidden;
+    height: 37%;
+    padding-top: 15px;
+    /* padding-bottom: 100px; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#book article .page .container h1 {
+    font-family: AppleSystemBold, MyHelveticaBold, YakuHanJPBold, "Noto Sans Japanese Bold", MyYuGothicM, sans-serif;
+    font-size: 17px;
+    /* line-height: 120%; */
+    /* margin: 15px 15px 0 15px; */
+    
+}
+
+/**段落内容**/
+#book article .page .container .body{
+    font-family: AppleSystemBold, MyHelveticaBold, YakuHanJPBold, "Noto Sans Japanese Bold", MyYuGothicM, sans-serif;
+    font-size: 14px;
+    margin-top: 7px;   
+    /* margin: 5px 15px 16px 15px; */
+    overflow: hidden;
+    color: #444;
+    text-align: justify;
+
+}
+
+/***设定链接样式***/
+#book article .page .container h1 a {
+    color: #222;
+    transition: color 0.4s;
+}
+
+#book article:hover > .page .container h1 a {
+    color: #ed3a08;
+}
+
+
+/**footer**/
+#book article .page footer {
+    position: absolute;
+    top: 320px;
+    left: 32px;
+    /* padding-top: 10px; */
+    /* width: 300px;
+    height: 20px; */
+}
+
+#book article .page footer .date {
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    font-style: normal;
+    height: 15px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+
+
+
+/***********************
+
+        top特殊化
+
+************************/
+/*宽度增加*/
+#book article.top {
+    width: 75%;
+    height: 350px;
+}
+
+#book article.top .page{
+    margin: 10px 10px 10px 20px;
+    height: 330px;
+    
+    /* transition: 0.5s; */
+}
+
+/*图片适应*/
+#book article.top .page .eyecatch {
+    height: 100%;
+    width: 50%;
+    border-radius: 7px;
+    float: left; /*并排显示效果*/
+}
+
+
+/*文字区域*/
+#book article.top .page .container {
+    /* height: 100%; width: 50%; */
+    overflow: hidden;
+    height: 85%;
+    padding-top: 15px;
+    /* padding-bottom: 100px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    /* float: right; */
+}
+
+/**文字样式改变**/
+#book article.top .page .container h1 {
+    margin-top: 35px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+#book article.top .page .container .body {
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    font-size: 14px;
+    margin-left: 20px; margin-right: 20px; margin-top: 8px;
+}
+
+/*footer位置移动*/
+#book article.top .page footer {
+    /* left: 20px;
+    float: bottom;
+    margin-left: 20px; */
+    position: absolute;
+    top: 320px;
+    left: 53.5%;
+}
+
+
+/*****************************
+
+
+            aside
+
+
+******************************/
+
+
+#side {
+    float: right;
+    width: 25%;
+}
+
+#side #sideInfo { /*h: 350*/
+    height: 310px;
+    margin: 10px 0 10px 20px;
+    background-color: #fff;
+    border: 10px solid #dddddd;
+    border-radius: 7px;
+}
+
+/********************
+
+        floor_1
+
+********************/
+#side #sideInfo .floor1 {
+    position: relative;
+    height: 45%;
+    background: #dddddd;
+}
+
+/**Temperatrue**/
+#side #sideInfo .floor1 .temperature {
+    z-index: 100;
+    color: #444;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    position: absolute;
+    font-style: normal;
+    text-transform: uppercase;
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+
+    /*TODO: 不稳定，待修改*/
+    float: right;
+    /* left: 81.7%; */
+    /* top: 12%; */
+    left: 65%;
+    top: 5%;
+}
+
+#side #sideInfo .floor1 .temperature:after {
+    position: relative;
+    font-size: 24px;
+    top: -20px;
+    content: '℃';
+}
+
+
+#side #sideInfo .floor1 .locationImg-box {
+    height: 80%;
+    background: #222;
+}
+
+/****location and date****/
+#side #sideInfo .floor1 .location_and_date {   
+    height: 20%;
+}
+
+#side #sideInfo .floor1 .location,
+#side #sideInfo .floor1 .date {
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 20px; */
+    font-size: 15px;
+    color: #444;
+
+    text-transform: uppercase;
+    padding-top: 6.45px;
+    width: 45%;
+
+}
+
+#side #sideInfo .floor1 .location {
+    float: left;
+    margin-left: 7px;
+}
+
+#side #sideInfo .floor1 .date {
+    float: right;
+    margin-right: 7px;
+    text-align: right;
+}
+
+
+/*************************
+
+        floor2
+
+*************************/
+
+
+/****wheather and air****/
+
+#side #sideInfo .floor2 {
+    height: 13.75%;
+    background: white;
+    border-top: 1px #f3f1f1 solid;
+}
+
+#side #sideInfo .floor2 .floor2-text {
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #444;
+    font-size: 15px;
+
+    width: 45%;
+
+    padding-top: 14.3px;
+}
+
+#side #sideInfo .floor2 .left {
+    float: left;
+    margin-left: 7px;
+}
+
+#side #sideInfo .floor2 .right {
+    float: right;
+    margin-right: 7px;
+    text-align: right;
+}
+
+#side #sideInfo .placeholder{
+    background: white;
+}
+
+/* 协会认证 排课系统 失物招领 二手市场 */
+
+/*****************************
+
+        populars
+
+********************************/
+
+#side #populars {
+    margin-top: 20px;
+    border-top: 1px #ed3a08 solid;
+    background: white;
+    margin-left: 20px;
+    /* height: 100%; */
+}
+
+/*标题*/
+#side #populars h1 {
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;
+    color: #ed3a08;
+    padding: 10px;
+}
+
+#side #populars ul {
+    margin: 0;
+    padding: 0;
+}
+
+#side #populars li {
+    padding: 9px 0 10px 10px;
+    border-top: 1px rgb(214, 211, 211) solid;
+    transition: background-color 0.4s;
+}
+
+#side #populars li:hover {
+    background-color: #ed3a08;
+}
+
+#side #populars li:hover>a {
+    color: white;
+}
+
+#side #populars a {
+    color: #222;
+}
+
+/*************************
+
+
+        sideCtrl
+
+
+**************************/
+/*整体区间*/
+#sideCtrl {
+    position: fixed;
+    float: right;
+    height: 100%;
+    width: 45px;
+
+    top: 0;
+    right: 0;
+    border-left: 1px white solid;
+
+    background: rgba(255, 255, 255, 0.65);
+
+}
+
+/*整体区间*/
+#sideCtrl .container {
+    width: 45px;
+    height: 100%;
+}
+
+/*分块*/
+#sideCtrl .container ul {
+    /* margin-top: 20px; */
+    width: 45px;
+}
+
+/*单个图标*/
+#sideCtrl .container li {
+    /* padding: 10px 12px; */
+    padding-left: 12px; padding-right: 12px;
+    width: 21px;
+    font-size: 16px;
+    height: 4.2%;
+    display: flex;
+}
+
+#sideCtrl .container li.special_qq {
+    padding-left: 10.5px;
+    padding-right: 10.5px;
+}
+
+#sideCtrl .container li.special_chevron {
+    padding-left: 13.9px;
+    padding-right: 13.9px;
+}
+
+/*链接样式*/
+#sideCtrl .container a {
+    color: #666;
+    align-self: center;
+}
+#sideCtrl .container li{
+    transition: background-color 0.4s;
+}
+
+#sideCtrl .container li:hover {
+    background-color: #ed3a08;
+}
+
+#sideCtrl .container li:hover a {
+    color: white;
+}
+
+/*文字样式*/
+#sideCtrl .container .nav .show_page{
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;    
+    /* height: 45px; */
+    height: 6.4%;
+    background: #eeeded;
+    font-size: 10px;
+
+}
+#sideCtrl .container .nav .show_page .cur_page{
+    font-family: 'adelle-sans', 'Adobe Blank', AppleSystem, sans-serif;    
+    height: 33%; width: 40px;
+    margin-left: 5px;
+    background:none;  
+	outline:none;  
+    border:0px;
+}
+#sideCtrl .container .nav .show_page .divide{
+    height: 33%; width: 45px;
+    text-align: center;
+    
+}
+#sideCtrl .container .nav .show_page .tot_page{
+    height: 10px; width: 40px;
+    margin-bottom: 5px; margin-right: 5px;
+    text-align: right;
+    font-size: 12px;
+}
+
+
+/*分块位置*/
+#sideCtrl .container .placeholder{
+    height: 25%;
+}
+#sideCtrl .container .placeholder-s{
+    height: 5%;
+}
+
+/******************************
+
+
+        copyright
+
+
+******************************/
+
+.copyright{
+    /* position: fixed; */
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: gray;
+}
+
+.copyright img{
+    width: 25px;
+}
+
+.copyright hr{
+    width: 80%;
+    border: 0;
+    height: 1px;
+    /* background-image: linear-gradient(red, yellow, blue); 从头部开始的线性渐变 */
+    background-image: linear-gradient(to right, white, gray, white); /*从左侧开始的线性渐变*/
+    /* to bottom right 从↖到↘ */
+
+}
